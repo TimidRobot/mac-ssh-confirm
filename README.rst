@@ -13,8 +13,8 @@ These tools allow confirmation while (still) meeting the following objectives:
   - Do not overwrite or replace executables
   - Do not require compiling or Xcode
 
-Additionally, configuration SSH to use ``ControlMaster`` connections, will
-keep thinks easy.
+Additionally, configuration of SSH to use ``ControlMaster`` connections, will
+keep things unobtrusive.
 
 .. _SSH Agent Hijacking:
    http://www.clockwork.net/blog/2012/09/28/602/ssh_agent_hijacking
