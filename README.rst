@@ -44,7 +44,7 @@ Inspiration
 ===========
 
 - `And now Chicken of the VNC tunneled through SSH on OS X`_ (includes
-  ``macos-askpass``, An SSH_ASKPASS command for MacOS X)
+  ``macos-askpass``, a SSH_ASKPASS command for Mac OS X)
 - `Making OpenSSH on Mac OS X More Secure`_
 - `Get Current Application with AppleScript`_
 
