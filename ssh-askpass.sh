@@ -44,7 +44,8 @@ else
 
     tell application _app
         display dialog \"${1}\" ¬
-            buttons {\"Allow\", \"Deny\"} default button 2 ¬
+            buttons { \"Deny\", \"Allow\"} ¬
+            default button 2 cancel button 1 ¬
             with title \"SSH AskPass\" with icon caution
     end tell
     ")
