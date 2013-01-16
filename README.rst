@@ -1,8 +1,10 @@
 Overview
 ========
 
-These tools allow me to activate confirmation of SSH agent identities while
-meeting the following objectives:
+One way to help protect against `SSH Agent Hijacking`_ is by confirming each
+use of the of the decrypted identities managed by ``ssh-agent``.
+
+These tools allow confirmation while (still) meeting the following objectives:
 
 - Password protected SSH identities
 - SSH identity passwords stored in Mac OS X Keychain
@@ -10,13 +12,19 @@ meeting the following objectives:
   - Do not overwrite or replace executables
   - Do not require compiling or Xcode
 
+Additionally, configuration SSH to use ``ControlMaster`` connections, will
+keep thinks easy.
+
+.. _SSH Agent Hijacking:
+   http://www.clockwork.net/blog/2012/09/28/602/ssh_agent_hijacking
+
 
 Installation
 ============
 
 1. Symlink ``ssh-askpass.sh`` to ``/usr/libexec/ssh-askpass``.
    (The ``install.sh`` script does this.)
-2. It may be convenient to put ``ssh_add_confirm_ids.sh`` in your ``PATH``.
+2. It may be convenient to put ``ssh_add_confirm_ids.sh`` in your PATH.
 
 
 Use
@@ -34,9 +42,17 @@ Use
 Inspiration
 ===========
 
-- `And now Chicken of the VNC tunneled through SSH on OS X (Joe Mocker's Weblog) <https://blogs.oracle.com/mock/entry/and_now_chicken_of_the>`_ (includes `macos-askpass`, An SSH_ASKPASS command for MacOS X)
-- `joshua stein: Making OpenSSH on Mac OS X More Secure <https://jcs.org/notaweblog/2011/04/19/making_openssh_on_mac_os_x_more_secure/>`_
-- `Get Current Application with AppleScript » Vanderbrew - The shared bits <http://vanderbrew.com/blog/2010/02/15/get-current-application-with-applescript/>`_
+- `And now Chicken of the VNC tunneled through SSH on OS X`_ (includes
+  ``macos-askpass``, An SSH_ASKPASS command for MacOS X)
+- `Making OpenSSH on Mac OS X More Secure`_
+- `Get Current Application with AppleScript`_
+
+.. _And now Chicken of the VNC tunneled through SSH on OS X:
+   https://blogs.oracle.com/mock/entry/and_now_chicken_of_the
+.. _Making OpenSSH on Mac OS X More Secure:
+   https://jcs.org/notaweblog/2011/04/19/making_openssh_on_mac_os_x_more_secure/
+.. _Get Current Application with AppleScript:
+   http://vanderbrew.com/blog/2010/02/15/get-current-application-with-applescript/
 
 
 License
