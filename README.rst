@@ -8,6 +8,9 @@ These tools allow confirmation while (still) meeting the following objectives:
 
 - Password protected SSH identities
 - SSH identity passwords stored in Mac OS X Keychain
+
+  - Passwords do not need to be entered again and again.
+
 - Absolute minimum install:
 
   - Do not overwrite or replace executables
@@ -15,6 +18,9 @@ These tools allow confirmation while (still) meeting the following objectives:
 
 Additionally, configuration of SSH to use ``ControlMaster`` connections, will
 keep things unobtrusive.
+
+This is a useful hack. More useful would be development by Apple to support
+SSH Agent confirmations.
 
 .. _SSH Agent Hijacking:
    http://www.clockwork.net/blog/2012/09/28/602/ssh_agent_hijacking
