@@ -7,6 +7,16 @@
 #    2. Prompt user to allow access to a key provided by the ssh-agent
 #       (a key that was added via ssh-add -c)
 
+set -o errexit
+set -o errtrace
+set -o nounset
+
+trap '_es=${?};
+    _lo=${LINENO};
+    _co=${BASH_COMMAND};
+    echo "${0}: line ${_lo}: \"${_co}\" exited with a status of ${_es}";
+    exit ${_es}' ERR
+
 # Default exit status is 1 (failure)
 es=1
 
