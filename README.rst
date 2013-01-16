@@ -14,18 +14,20 @@ meeting the following objectives:
 Installation
 ============
 
-1. Symlink `ssh-askpass.sh` to `/usr/libexec/ssh-askpass`.
-   (The `install.sh` script does this.)
-2. It may be convenient to put `ssh_add_confirm_ids.sh` in your `PATH`.
+1. Symlink ``ssh-askpass.sh`` to ``/usr/libexec/ssh-askpass``.
+   (The ``install.sh`` script does this.)
+2. It may be convenient to put ``ssh_add_confirm_ids.sh`` in your ``PATH``.
 
 
 Use
 ===
 
-1. Add identities to your Mac OS X Keychain via `ssh-add -K`
-2. Prior to connecting to any hosts, execute `ssh_add_confirm_ids.sh`
-   - In the interest of security, do **not** Always Allow security access to your
-     keychain
+1. Add identities to your Mac OS X Keychain via ``ssh-add -K``
+2. Prior to connecting to any hosts, execute ``ssh_add_confirm_ids.sh``
+
+   - In the interest of security, do **not** Always Allow security access to
+     your keychain
+
 3. Repeat step 3 each time you log into your Mac
 
 
