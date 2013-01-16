@@ -36,7 +36,7 @@ Use
    - In the interest of security, do **not** Always Allow security access to
      your keychain
 
-3. Repeat step 3 each time you log into your Mac
+3. Repeat the step above each time you log into your Mac
 
 
 Inspiration
