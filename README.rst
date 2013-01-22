@@ -45,6 +45,16 @@ Use
 
 3. Repeat the step above each time you log into your Mac
 
+To clear existing identities in the agent and load configured identies to
+require confirmation:
+
+- ``ssh-add -D; ssh_add_confirm_ids.sh``
+
+To clear existing identities in the agent and load identities saved in your
+keychain **without** the need to confirm access:
+
+- ``ssh-add -D; ssh-add -k``
+
 
 Inspiration
 ===========
