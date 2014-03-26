@@ -16,22 +16,29 @@ These tools allow confirmation while (still) meeting the following objectives:
   - Do not overwrite or replace executables
   - Do not require compiling or Xcode
 
-Additionally, configuration of SSH to use ``ControlMaster`` connections, will
-keep things unobtrusive.
+Additionally, configuring SSH to use ``ControlMaster`` connections, will
+keep things unobtrusive (see `ControlMaster Controller`_ for a useful utility
+that eases management of SSH ControlMaster connections).
 
 This is a useful hack. More useful would be development by Apple to support
 SSH Agent confirmations.
 
 .. _SSH Agent Hijacking:
    http://www.clockwork.net/blog/2012/09/28/602/ssh_agent_hijacking
+.. _`ControlMaster Controller`: https://github.com/ClockworkNet/cmc
 
 
 Installation
 ============
 
-1. Symlink ``ssh-askpass.sh`` to ``/usr/libexec/ssh-askpass``.
+1. OS X no longer comes with X11. Unless you have an old release, XQuartz_ is
+   required (`#1`_).
+2. Symlink ``ssh-askpass.sh`` to ``/usr/libexec/ssh-askpass``.
    (The ``install.sh`` script does this.)
-2. It may be convenient to put ``ssh_add_confirm_ids.sh`` in your PATH.
+3. It may be convenient to put ``ssh_add_confirm_ids.sh`` in your PATH.
+
+.. _XQuartz: https://xquartz.macosforge.org/landing/
+.. _`#1`: https://github.com/TimZehta/mac-ssh-confirm/issues/1
 
 
 Use
