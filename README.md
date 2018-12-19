@@ -25,6 +25,7 @@ Additional helper utilities:
   access across hosts
 
 
+[hijacking]:http://www.clockwork.net/blog/2012/09/28/602/ssh_agent_hijacking
 [cmc]:https://github.com/TimidRobot/cmc
 [soloagent]:https://github.com/TimidRobot/solo-agent
 
