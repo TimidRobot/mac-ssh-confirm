@@ -18,21 +18,21 @@ trap '_es=${?};
     exit ${_es}' ERR
 
 # Default exit status is 1 (failure)
-es=1
+ES=1
 
 # Test input to determine mode
 if [[ "${1}" =~ ^Enter\ passphrase\ for ]]
 then
     #### Provide key when invoked as "Enter Passphrase for IDENTITY_PATH: "
     # Isolate identity path
-    id=${1#*for }
-    id=${id%: }
+    ID=${1#*for }
+    ID=${id%: }
     # Query Keychain for password
     security -q find-generic-password -a ${id} -w
-    es=${?}
+    ES=${?}
 else
     #### Prompt user to allow access to IDENTITY
-    result=$(osascript -e "
+    RESULT=$(osascript -e "
     on GetCurrentApp()
         tell application \"System Events\"
             set _app to item 1 of (every process whose frontmost is true)
@@ -51,10 +51,9 @@ else
     ")
 
     # Return successful exit status if allowed
-    if [[ "${result}" == 'button returned:Allow' ]]
+    if [[ "${RESULT}" == 'button returned:Allow' ]]
     then
-        es=0
+        ES=0
     fi
 fi
-
-exit ${es}
+exit ${ES}

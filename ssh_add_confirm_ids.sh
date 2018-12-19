@@ -29,7 +29,7 @@ do
         :  # success, no-op
     else
         es=${?}
-        echo "ERROR: failed to add identity: ${_id}"
+        echo "ERROR: failed to add identity: ${_id}" 1>&2
         exit ${es}
     fi
 done

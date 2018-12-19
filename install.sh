@@ -12,14 +12,14 @@ trap '_es=${?};
     echo "${0}: line ${_lo}: \"${_co}\" exited with a status of ${_es}";
     exit ${_es}' ERR
 
-dest=/usr/libexec/ssh-askpass
-src="$(pwd)/ssh-askpass.sh"
+DEST=/usr/libexec/ssh-askpass
+SRC="$(pwd)/ssh-askpass.sh"
 
 # only install if there's nothing there, or it's a symlink
-if [[ ! -e "${dest}" ]] || [[ -L "${dest}" ]]
+if [[ ! -e "${DEST}" ]] || [[ -L "${DEST}" ]]
 then
-    sudo ln -fns "${src}" "${dest}"
+    sudo ln -fns "${SRC}" "${DEST}"
 else
-    echo "ERROR: ${dest} must be absent or a symlink for install"
-    ls -l ${dest}
+    echo "ERROR: ${DEST} must be absent or a symlink for install" 1>&2
+    ls -l ${DEST}
 fi
