@@ -39,7 +39,7 @@ Additional helper utilities:
 3. It may be convenient to put `ssh_add_confirm_ids.sh` in your PATH.
 
 [xquartz]:https://xquartz.macosforge.org/landing/
-[issue1]:https://github.com/TimZehta/mac-ssh-confirm/issues/1
+[issue1]:https://github.com/TimidRobot/mac-ssh-confirm/issues/1
 
 
 ## Use
